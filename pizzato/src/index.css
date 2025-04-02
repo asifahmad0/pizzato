@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+.primary{
+    background-color: #ffc001;
+}
+.secondry{
+    background-color: #ff9c01;
+}
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+.spin{
+    animation: spin 40s linear infinite;
+}
+.bg{
+    z-index: -100;
+    background-repeat: no-repeat;
+}
