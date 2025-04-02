@@ -49,7 +49,7 @@ function Hero() {
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-[#000000] text-5xl sm:6xl lg:text-7xl font-bold"
+                className="text-[#000000] dark:text-white text-5xl sm:6xl lg:text-7xl font-bold"
               >
                 Welcome To <span className="text-[#ffc001]">Pizzato </span>Zone
               </motion.h2>
