@@ -12,8 +12,7 @@ function Banner() {
     <>
     <div className="min-h-[500px] md:mt-4">
         <div className='md:mr-10'>
-            <div data-aos="slide-up" 
-            data-aos-duration='300'
+            <div
             className="contauner">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {/* banner image section */}

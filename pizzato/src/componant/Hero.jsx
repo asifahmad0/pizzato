@@ -35,8 +35,7 @@ function Hero() {
     <>
       <div
         style={BgImage}
-        className=" bg min-h-[550px] sm:min-h-[600px] bg-gray-100 dark:bg-gray-900
-    dark:text-white duration-200 flex justify-center items-center m-0"
+        className=" bg min-h-[550px] sm:min-h-[600px] bg-gray-100 duration-200 flex justify-center items-center m-0"
       >
         <div className="container pb-8 sm:pb-0">
           <div className="grid grid-cols-1 sm:grid-cols-2">
@@ -46,26 +45,33 @@ function Hero() {
                gap-4 pt-12 sm:pl-4 text-center sm:text-left order-2 sm:order-1 "
             >
               <motion.h2
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                className="text-[#000000] dark:text-white text-5xl sm:6xl lg:text-7xl font-bold"
+                initial={{ opacity: 0, y: -200 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{type:"spring", damping:10, stiffness:100, delay:0.8 }}
+                className="text-[#000000]
+                 text-5xl sm:6xl lg:text-7xl font-bold"
               >
                 Welcome To <span className="text-[#ffc001]">Pizzato </span>Zone
               </motion.h2>
 
-              <p className=" mt-4 text-sm">
+              <motion.p 
+              initial={{opacity:0, x:-200}}
+              animate={{opacity:1, x:0}}
+              transition={{ type:"spring", damping:10,delay:1}}
+              className=" mt-4 text-sm">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Aliquid asperiores incidunt odit iure, deleniti consequuntur
                 sunt sequi quae dolorum nam?
-              </p>
+              </motion.p>
               <div className="mt-4">
-                <button
+                <motion.button
+                initial={{opacity:0, x:200}}
+                animate={{opacity:1, x:0}}
+                transition={{ type:"spring", damping:10, delay:0.5}}
                   className="bg-gradient-to-r from-[#ffc001] to-[#ff9c01]
-                text-white px-4 py-2 rounded-full hover:scale-105 cursor-pointer"
-                >
+                text-white px-4 py-2 rounded-full hover:scale-105 cursor-pointer">
                   Order Now
-                </button>
+                </motion.button>
               </div>
             </div>
             {/* Image section */}
@@ -74,13 +80,17 @@ function Hero() {
                flex justify-center items-center relative"
             >
               {/* main image section */}
-              <div className=" flex justify-center items-center h-[300px] sm:h-[450px] overflow-hidden">
+              <motion.div 
+              initial={{opacity:0, scale:1.5}}
+              animate={{opacity:1, scale:1}}
+              transition={{duration:1.2}}
+              className=" flex justify-center items-center h-[300px] sm:h-[450px] overflow-hidden">
                 <img
                   src={imageId}
                   className="w-[250px] sm:w-[400px] 
                   max-auto spin rounded-full md:-"
                 />
-              </div>
+              </motion.div>
               {/* main list section */}
               <div
                 className="flex lg:flex-col lg:top-1/2 lg:-translate-y-1/2 

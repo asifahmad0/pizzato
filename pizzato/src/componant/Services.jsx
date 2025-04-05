@@ -3,6 +3,7 @@ import pas1 from "../assets/images/pas1.png"
 import pz1 from "../assets/images/p1.png"
 import pz2 from "../assets/images/p2.png"
 import pz3 from "../assets/images/p3.png"
+import { motion } from 'framer-motion'
 function Services() {
 
   const[img, setImg]= useState(pz1)
@@ -33,14 +34,18 @@ const ServiceCard =[
     <div className='py-10 ' >
       <div className="container ">
         {/* Service Header Section */}
-        <div className=" text-center md-20 max-w-[400px] mx-auto">
+        <motion.div
+        initial={{opacity:0, scale:0}}
+        animate={{opacity:1, scale:1}}
+        transition={{delay:1}}
+        className=" text-center md-20 max-w-[400px] mx-auto">
           <p className='text-sm bg-clip-text text-transparent
            bg-gradient-to-r from-[#ffc001] to-[#ff9c01]'>Our Services</p>
           <h2 className='text-3xl font-bold'>Services</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
              Autem, placeat voluptates laboriosam tenetur porro quidem
               sequi pariatur inventore,</p>
-        </div>
+        </motion.div>
         {/* Service Card Section */}
         <div className='mt-14'>
           <div className=' mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
